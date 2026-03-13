@@ -1,9 +1,10 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 interface CTAButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  className?: string;
 }
 
 export function CTAButton({ children, className = '', ...props }: CTAButtonProps) {

@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Activity, Heart, Shield, ChevronDown, Menu, X, Star, CheckCircle2, ArrowUpRight, Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
-import { LightRays } from './components/LightRays';
 import { CTAButton } from './components/CTAButton';
 
 const Button = ({ children, variant = 'primary', className = '', ...props }: any) => {
@@ -75,19 +74,8 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative pt-40 pb-24 overflow-hidden min-h-screen flex items-center">
-      {/* Background Glow and LightRays */}
+      {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      <LightRays
-        raysOrigin="top-center"
-        raysColor="#FF6A2B"
-        raysSpeed={1.5}
-        lightSpread={1.2}
-        rayLength={1.8}
-        followMouse={true}
-        mouseInfluence={0.3}
-        noiseAmount={0.03}
-        distortion={0.08}
-      />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center">
