@@ -83,7 +83,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-6"
           >
             Healthcare is broken.<br />
             <span className="text-gradient">Your body isn't.</span>
@@ -93,7 +93,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl md:text-2xl text-text-muted mb-8 font-light"
+            className="text-lg sm:text-xl md:text-2xl text-text-muted mb-8 font-light"
           >
             From Dysfunction to Vitality
           </motion.p>
@@ -102,7 +102,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-text-muted mb-10"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-text-muted mb-8 md:mb-10"
           >
             <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
             Longevity | Functional Medicine | Root Cause Healing
@@ -157,7 +157,7 @@ const Conditions = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
@@ -193,16 +193,16 @@ const Metrics = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
           <div className="py-8 md:py-0">
-            <div className="text-5xl font-semibold text-white mb-2 glow-text-orange">5000+</div>
+            <div className="text-4xl md:text-5xl font-semibold text-white mb-2 glow-text-orange">5000+</div>
             <div className="text-text-muted uppercase tracking-wider text-sm font-medium">Lives Transformed</div>
           </div>
           <div className="py-8 md:py-0">
-            <div className="text-5xl font-semibold text-white mb-2 glow-text-orange">12+</div>
+            <div className="text-4xl md:text-5xl font-semibold text-white mb-2 glow-text-orange">12+</div>
             <div className="text-text-muted uppercase tracking-wider text-sm font-medium">Countries Reached</div>
           </div>
           <div className="py-8 md:py-0">
-            <div className="text-5xl font-semibold text-white mb-2 flex items-center justify-center gap-2 glow-text-orange">
-              4.9 <Star className="w-8 h-8 fill-accent-primary text-accent-primary" />
+            <div className="text-4xl md:text-5xl font-semibold text-white mb-2 flex items-center justify-center gap-2 glow-text-orange">
+              4.9 <Star className="w-6 h-6 md:w-8 md:h-8 fill-accent-primary text-accent-primary" />
             </div>
             <div className="text-text-muted uppercase tracking-wider text-sm font-medium">Google Reviews</div>
           </div>
@@ -276,23 +276,23 @@ const SocialProof = () => {
         </div>
 
         <div className="overflow-hidden mask-edges relative w-full py-4">
-          <div className="flex gap-8 pr-8 w-max animate-marquee">
+          <div className="flex gap-4 md:gap-8 pr-4 md:pr-8 w-max animate-marquee">
             {[...testimonials, ...testimonials].map((t, i) => (
               <div
                 key={i}
-                className="bg-bg-card p-8 rounded-2xl border border-white/5 relative overflow-hidden w-[350px] md:w-[450px] shrink-0 flex flex-col"
+                className="bg-bg-card p-6 md:p-8 rounded-2xl border border-white/5 relative overflow-hidden w-[85vw] sm:w-[350px] md:w-[450px] shrink-0 flex flex-col"
               >
-                <Star className="absolute top-8 right-8 w-12 h-12 text-white/5" />
-                <div className="flex gap-1 mb-6">
+                <Star className="absolute top-6 right-6 md:top-8 md:right-8 w-8 h-8 md:w-12 md:h-12 text-white/5" />
+                <div className="flex gap-1 mb-4 md:mb-6">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-accent-primary text-accent-primary" />
+                    <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-accent-primary text-accent-primary" />
                   ))}
                 </div>
-                <p className="text-lg text-text-muted mb-8 leading-relaxed flex-grow">"{t.quote}"</p>
+                <p className="text-base md:text-lg text-text-muted mb-6 md:mb-8 leading-relaxed flex-grow">"{t.quote}"</p>
                 <div className="flex items-center gap-4 mt-auto">
                   <div>
-                    <div className="font-medium text-white">{t.author}</div>
-                    <div className="text-sm text-accent-primary">{t.role}</div>
+                    <div className="font-medium text-white text-sm md:text-base">{t.author}</div>
+                    <div className="text-xs md:text-sm text-accent-primary">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -333,8 +333,8 @@ const HowItWorks = () => {
     <section className="py-32 bg-bg-section relative" id="how-it-works">
       <div className="max-w-4xl mx-auto px-6">
         <div className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6">How It Works</h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">How It Works</h2>
+          <p className="text-lg md:text-xl text-text-muted max-w-2xl mx-auto">
             Our systematic approach to reversing dysfunction and building lifelong vitality.
           </p>
         </div>
@@ -343,21 +343,21 @@ const HowItWorks = () => {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="sticky w-full bg-bg-card rounded-[2.5rem] border border-white/5 p-8 md:p-12 shadow-2xl flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center"
+              className="sticky w-full bg-bg-card rounded-[2rem] md:rounded-[2.5rem] border border-white/5 p-6 md:p-12 shadow-2xl flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center"
               style={{ 
                 top: `calc(120px + ${i * 30}px)`,
                 zIndex: 10 + i
               }}
             >
-              <div className="flex-shrink-0 w-20 h-20 md:w-32 md:h-32 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-3xl md:text-5xl font-semibold text-accent-primary shadow-[0_0_30px_rgba(255,106,43,0.1)]">
+              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-2xl sm:text-3xl md:text-5xl font-semibold text-accent-primary shadow-[0_0_30px_rgba(255,106,43,0.1)]">
                 0{i + 1}
               </div>
               <div className="flex-1">
-                <div className="text-accent-primary font-medium tracking-wider uppercase text-sm mb-3">
+                <div className="text-accent-primary font-medium tracking-wider uppercase text-xs md:text-sm mb-2 md:mb-3">
                   {step.num}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-lg text-text-muted leading-relaxed">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 md:mb-4">{step.title}</h3>
+                <p className="text-base md:text-lg text-text-muted leading-relaxed">
                   {step.desc}
                 </p>
               </div>
@@ -376,18 +376,18 @@ const Philosophy = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-primary/80 to-bg-primary" />
       
       <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-        <h2 className="text-4xl md:text-6xl font-semibold mb-8 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-6 md:mb-8 tracking-tight">
           Ditch the sick-care trap.
         </h2>
-        <p className="text-xl text-text-muted mb-12 leading-relaxed font-light">
+        <p className="text-lg md:text-xl text-text-muted mb-8 md:mb-12 leading-relaxed font-light">
           Healthcare needs a revolution. From symptom management to root-cause healing. 
           From lifelong prescriptions to lifelong vitality. 
         </p>
-        <p className="text-xl text-text-muted mb-12 leading-relaxed font-light">
+        <p className="text-lg md:text-xl text-text-muted mb-8 md:mb-12 leading-relaxed font-light">
           Join our WhatsApp community and be part of the movement to Be Limitless.
         </p>
 
-        <Button variant="secondary" className="px-8 py-4 text-lg">
+        <Button variant="secondary" className="px-6 py-3 md:px-8 md:py-4 text-base md:text-lg">
           Join WhatsApp Community
         </Button>
       </div>
@@ -442,11 +442,11 @@ const FAQ = () => {
           {faqs.map((faq, i) => (
             <div key={i} className="bg-bg-card border border-white/5 rounded-2xl overflow-hidden">
               <button 
-                className="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none"
+                className="w-full px-5 py-5 md:px-6 md:py-6 flex items-center justify-between text-left focus:outline-none"
                 onClick={() => setOpenIdx(openIdx === i ? null : i)}
               >
-                <span className="font-medium text-lg">{faq.q}</span>
-                {openIdx === i ? <Minus className="w-5 h-5 text-accent-primary" /> : <Plus className="w-5 h-5 text-text-muted" />}
+                <span className="font-medium text-base md:text-lg">{faq.q}</span>
+                {openIdx === i ? <Minus className="w-5 h-5 text-accent-primary flex-shrink-0 ml-4" /> : <Plus className="w-5 h-5 text-text-muted flex-shrink-0 ml-4" />}
               </button>
               <AnimatePresence>
                 {openIdx === i && (
@@ -456,7 +456,7 @@ const FAQ = () => {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 text-text-muted">
+                    <div className="px-5 pb-5 md:px-6 md:pb-6 text-sm md:text-base text-text-muted">
                       {faq.a}
                     </div>
                   </motion.div>
@@ -510,7 +510,7 @@ const Blog = () => {
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {posts.map((post, i) => (
             <a key={i} href="#" className="group block bg-bg-card border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-all">
               <div className="aspect-[3/2] overflow-hidden">
@@ -544,8 +544,8 @@ const Footer = () => {
   return (
     <footer className="bg-bg-primary pt-24 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-accent-primary flex items-center justify-center">
                 <Activity className="w-5 h-5 text-white" />
